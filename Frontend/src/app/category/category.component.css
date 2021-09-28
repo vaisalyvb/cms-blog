@@ -1,0 +1,44 @@
+#blos {
+    margin-top: 5%;
+    margin-bottom: 3%;
+    margin-left: 10%;
+    color: black;
+  }
+  .navbar {
+    background-image: linear-gradient(-90deg, #ff0077, #8214dc);
+  }
+  .navbar-nav a {
+    color: white;
+    font-weight: bold;
+  }
+  .navbar-nav a:hover {
+    color: lightblue;
+  }
+  .card img {
+    height: 5cm;
+    width: 10cm;
+  }
+  .card {
+    height: 560px;
+  }
+  .card h2 {
+    text-align: center;
+    color: #223c50;
+    font-weight: bolder;
+  }
+  .card-text {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+  }
+  .card-text p {
+    font-family: "Roboto", sans-serif;
+    text-align: justify;
+  }
+  .details {
+    font-weight: 700;
+    font-size: small;
+    color: brown;
+    margin-bottom: 3%;
+  }
+  

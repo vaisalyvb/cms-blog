@@ -1,0 +1,198 @@
+
+.navbar{
+    background-image: linear-gradient(-90deg, #002fff, #DC143C);
+    }
+    .navbar-nav a{
+        font-size: 18px;
+        color:black;
+        padding: 18px;
+        font-family: sans-serif;
+        font-weight: bolder;
+    }
+    .navbar-nav a:hover{
+        
+        color:white;
+        transition: .2s ease-in-out;
+    }
+    @media (max-width:909px) {
+        .navbar-nav a:hover{
+            border-bottom: none;
+            color: orange;
+            transition: .2s ease-in-out;
+        }
+     }
+     
+    .blog{
+        margin-top: 4%;
+        margin-bottom: 5%;
+        background-color: #DCDCDC;
+        padding-top: 40px;
+    }
+    
+    #blo{
+        color: orangered;
+        font-weight: bolder;
+        font-size: 2em;
+        margin-bottom: 2%;
+        margin-top: 5%;
+        margin-left: 7%;
+        border-bottom: 3px solid #FF8C00;
+        width: 10%;
+    }
+    
+    .card{
+        height: 480px;
+    }
+    .card h2{
+        text-align: center;
+        color: #223c50;
+        font-weight: bolder;
+    }
+    .card-text{
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 20px;
+        
+    }
+    .card-text p{
+        font-family: 'Roboto', sans-serif;
+        text-align: justify;
+    }
+    .inner{
+        overflow: hidden;
+    }
+    .inner img{
+    transition: all 1.5s ease;
+    }
+    .inner:hover img{
+        transform: scale(1.5);
+    }
+    .card:hover{
+        border-bottom: 3px solid orange;
+    }
+    .card img{
+        height: 220px;
+        width: 100%;
+    }
+    
+    .card-text a{
+        font-size: 14px;
+        background-color: crimson;
+        padding: 10px 20px;
+        color: white;
+        transition: all 0.5s ease-in;
+        border: none;
+        text-decoration: none;
+        font-weight: bolder;
+    
+    }
+    
+    .card-text a:hover{
+        font-size: 14px;
+        background-color: white;
+        border:  1px solid brown;
+        color: brown;
+        border-top-right-radius: 20px;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+    
+     .about{
+        margin-top: 5%;
+        background-color:powderblue;
+        padding: 15px;
+        padding-bottom: 25px;
+    }
+    
+    .about h3{
+        color: gray;
+        font-weight: bolder;
+        margin-top: 3%;
+    }
+    
+    .about a{
+        background-image: linear-gradient(-90deg, #FF8C00, #DC143C);
+        color: white;
+        font-weight: bolder;
+        padding: 15px;
+        text-decoration: none;
+    }
+    .about a:hover{
+        transition: all 0.5s ease-in;
+        border-top-right-radius: 20px;
+    }
+    .about img{
+        height: 370px;
+        width: 80%;
+        object-fit: cover;
+        margin-top: 3%;
+    }
+    .about p{
+        text-align: justify;
+        font-family: 'Roboto', sans-serif;
+    } 
+    
+    .like{
+        margin-top: 5%;
+    }
+    .like .container-fluid{
+        background-image: url('https://images.pexels.com/photos/1111317/pexels-photo-1111317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .like .heading1{
+        margin-top: 20%;
+        margin-bottom: 4%;
+        color: whitesmoke;
+        width: 80%;
+        font-weight: bolder;
+    }
+    .like p{
+        width: 80%;
+        color: whitesmoke;
+        margin-bottom: 7%;
+        font-weight: bolder;
+    }
+    .like a{
+        margin-bottom: 30%;
+        background-image: linear-gradient(-90deg, #FF8C00, #DC143C);
+        color: white;
+        font-weight: bolder;
+        padding: 15px;
+        text-decoration: none;
+        width: 25%;
+        margin-left: 5%;
+    }
+    .like a:hover{
+        transition: all 0.5s ease-in;
+        border-top-right-radius: 20px;
+    }
+    
+    .carol .carousel .carousel-item{
+        height: 550px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    .carol .carousel img{
+        height: 550px;
+    }
+    
+    .banner-title{
+        text-align: center;
+        font-weight: 800;
+        color: crimson;
+        font-family: 'Encode Sans SC', sans-serif;
+        font-size: 4.3em;
+    }
+    .banner{
+        margin-top: 8%;
+    }
+    .banner p{
+        text-align: center;
+        font-weight: bolder;
+        border-bottom: 3px solid #FF8C00;
+        font-family: 'Otomanopee One', sans-serif;
+        font-size: 1.1em;
+    }
+    

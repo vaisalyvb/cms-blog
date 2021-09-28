@@ -1,0 +1,98 @@
+
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" rouerLink="">
+        <img src="/assets/images/logonew.png" height="70px" width="80px" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/blog"
+              *ngIf="!blogService.getValue() || !blogService.getUser()"
+              >Blog</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/managecategory"
+              *ngIf="blogService.getValue()"
+              > Category</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/dashboard"
+              *ngIf="blogService.getValue() || blogService.getUser()"
+              >Dashboard</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/createpost"
+              *ngIf="blogService.getValue() || blogService.getUser()"
+              >Create post</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/login"
+              *ngIf="blogService.getValue() && blogService.getUser()"
+              >Login</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/signup"
+              *ngIf="blogService.getValue() && blogService.getUser()"
+              >Sign Up</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="cursor: pointer"
+              (click)="logout()"
+              *ngIf="blogService.getValue() || blogService.getUser()"
+              >Log Out</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h2 style="color: #223c50; margin-top: 10%">{{ post.title }}</h2>
+          <br />
+          <img [src]="post.image" class="img-fluid" alt="" />
+          <br />
+          <div
+            [innerHTML]="post.content"
+            style="text-align: justify; margin-top: 4%"
+          ></div>
+          <br />
+        </div>
+  
+      <br />
+    <app-footer></app-footer>
+  </div>
+  

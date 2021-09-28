@@ -1,0 +1,52 @@
+.firstdiv .navbar {
+    background-image: linear-gradient(-90deg, #ff0077, #8214dc);
+  }
+  .firstdiv a {
+    color: white;
+    font-weight: bold;
+  }
+  .firstdiv a:hover {
+    color: black;
+  }
+  
+  @media (max-width: 909px) {
+    .firstdiv .navbar-nav .active-route {
+      border-bottom: none;
+    }
+  }
+  
+  .card img {
+    height: 5cm;
+    width: 10cm;
+  }
+  .card {
+    height: 560px;
+  }
+  .card h2 {
+    text-align: center;
+    color: #223c50;
+    font-weight: bolder;
+  }
+  .card-text {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+  }
+  .card-text p {
+    font-family: "Roboto", sans-serif;
+    text-align: justify;
+  }
+  .second .navbar {
+    background-color:lightblue;
+  }
+  .second a {
+    color:black;
+    font-weight: bold;
+  }
+  .blog {
+    margin-top: 5%;
+  }
+  .active-route {
+    border-bottom: 2px solid white;
+  }
+  

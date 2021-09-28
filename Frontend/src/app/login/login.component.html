@@ -1,0 +1,72 @@
+<div class="row">
+  <div class="col-md-8">
+    <div class="login-box">
+      <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && loginUser()">
+        <h2>Login </h2>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Enter your email"
+            name="email"
+            [(ngModel)]="user.email"
+            #email="ngModel"
+            [ngClass]="{
+              'invalid-data': email.invalid && f.submitted,
+              'valid-data': email.valid && f.submitted
+            }"
+            [class.error-border]="email.invalid && f.submitted"
+            pattern="^[a-z0-9.%+]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            required
+          />
+          <small
+            style="color: black; font-weight: bold"
+            *ngIf="
+              (email.invalid && f.submitted) || (email.invalid && email.touched)
+            "
+            >Enter valid email</small
+          >
+        </div>
+        <br />
+        <div class="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Enter your password"
+            name="password"
+            [(ngModel)]="user.password"
+            #password="ngModel"
+            [ngClass]="{
+              'invalid-data': password.invalid && f.submitted,
+              'valid-data': password.valid && f.submitted
+            }"
+            [class.error-border]="password.invalid && f.submitted"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%?&])[A-Za-z\d$@$!%?&]{8,}$"
+            required
+          />
+          <small
+            style="color: black; text-align: justify; font-weight: bold"
+            *ngIf="
+              (password.invalid && f.submitted) ||
+              (password.invalid && password.touched)
+            "
+            >Password should contain minimum 8 characters with at least one
+            uppercase, lowercase, special characters & digits.</small
+          >
+        </div>
+        <br />
+        <button type="submit" class="btu">LOGIN</button>
+        
+      </form>
+    </div>
+  </div>
+ 
+    <div class="col-md-4">
+      <div class="first">
+        <br>
+        <button class="but" routerLink="/signup" style="font-weight: bold">SIGN UP </button>
+      </div>
+    </div>
+</div>

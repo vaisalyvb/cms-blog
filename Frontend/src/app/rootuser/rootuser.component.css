@@ -1,0 +1,32 @@
+.first {
+    background-color: lightseagreen;
+    height: 100%;
+  }
+  .first a {
+    color: white;
+    font-weight: 500;
+    margin-left: 10%;
+  }
+  .second {
+    margin-top: 3%;
+    max-width: 75%;
+    margin-left: 3%;
+  }
+  .second h1 {
+    margin-left: 3%;
+  }
+  .second .card-body {
+    height: 90px;
+  }
+  .second .card-body a {
+    font-weight: bold;
+  }
+ .btn{
+   color:darkgreen;
+   text-decoration: underline;
+   text-align: center;
+  } 
+ .btn:hover{
+   background-color: cornflowerblue;
+ } 
+ 

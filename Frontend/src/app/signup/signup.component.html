@@ -1,0 +1,164 @@
+<div class="row">
+  <div class="col-md-8">
+    <div class="login-box">
+      <form
+        [formGroup]="registerForm"
+        (ngSubmit)="registerForm.valid && signUser()"
+      >
+        <h2>Sign up</h2>
+        <div class="form-group">
+          <label for="inputname">First name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="First name"
+            name="firstname"
+            formControlName="firstname"
+          />
+          <small
+            style="color: brown; font-weight: bolder"
+            *ngIf="
+              registerForm.get('firstname')?.touched &&
+              registerForm.get('firstname')?.hasError('required')
+            "
+            >  Enter first name</small
+          >
+          <small
+            style="color: black; font-weight: bold"
+            *ngIf="
+              registerForm.get('firstname')?.touched &&
+              registerForm.get('firstname')?.hasError('pattern')
+            "
+            > Only alphabets are allowed</small
+          >
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="inputname">Last name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Last name"
+            name="lastname"
+            formControlName="lastname"
+          />
+          <small
+            style="color: brown; font-weight: bolder"
+            *ngIf="
+              registerForm.get('lastname')?.touched &&
+              registerForm.get('lastname')?.hasError('required')
+            "
+            > Enter last name</small
+          >
+          <small
+            style="color: black; font-weight: bold"
+            *ngIf="
+              registerForm.get('lastname')?.touched &&
+              registerForm.get('lastname')?.hasError('pattern')
+            "
+            > Only alphabets are allowed</small
+          >
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Enter email"
+            name="email"
+            formControlName="email"
+          />
+          <small
+            style="color:brown; font-weight: bolder"
+            *ngIf="
+              registerForm.get('email')?.touched &&
+              registerForm.get('email')?.hasError('required')
+            "
+            >Enter email id</small
+          >
+          <small
+            style="color: black; font-weight: bold"
+            *ngIf="
+              registerForm.get('email')?.touched &&
+              registerForm.get('email')?.hasError('pattern')
+            "
+            >Email should be of valid format</small
+          >
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="pwd">Password</label
+          ><span id="strength"
+            ><small class="{{ color }}">
+              <b>{{ pwdmsg }}</b>
+            </small>
+          </span>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Enter password"
+            name="password"
+            formControlName="password"
+            (keyup)="validatePassword()"
+          />
+          <small
+            style="color: brown; font-weight: bolder"
+            *ngIf="
+              registerForm.get('password')?.touched &&
+              registerForm.get('password')?.hasError('required')
+            "
+            >Enter password</small
+          >
+          <small
+            style="color: black; font-weight: bold"
+            *ngIf="
+              registerForm.get('password')?.touched &&
+              registerForm.get('password')?.hasError('pattern')
+            "
+            >Password should contain minimum 8 characters with at least one
+            uppercase, lowercase, special characters & digits.</small
+          >
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="phonenumber">Phone number</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter your phone number"
+            name="phone"
+            formControlName="phone"
+          />
+          <small
+            style="color: brown; font-weight: bolder"
+            *ngIf="
+              registerForm.get('phone')?.touched &&
+             
+              registerForm.get('phone')?.hasError('required')
+            "
+            > Enter phone number</small
+          >
+          <small
+            style="color: black; font-weight: bold"
+            *ngIf="
+              registerForm.get('phone')?.touched &&
+              registerForm.get('phone')?.hasError('pattern')
+            "
+            > Phone number should contain 10 digits only </small
+          >
+        </div>
+        <br />
+        <button type="submit" class="btu">SIGN UP</button>
+        
+      </form>
+    </div>
+  </div>
+  <div class="col-md-4">
+      <div class="first">
+       <br>
+        <button class="but" routerLink="/login" style="font-weight: bold"> LOGIN</button>
+      </div>
+    </div>
+</div>
+

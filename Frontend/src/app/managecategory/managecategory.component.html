@@ -1,0 +1,145 @@
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" rouerLink="">
+        <img src="/assets/images/logonew.png" height="70px" width="80px" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarText" >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/blog"
+              *ngIf="blogService.getValue() || blogService.getUser()"
+              >Blog</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/managecategory"
+              routerLinkActive="active-route"
+              *ngIf="blogService.getValue()"
+              >  Category </a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/dashboard"
+              *ngIf="blogService.getValue() || blogService.getUser()"
+              >Dashboard</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/createpost"
+              *ngIf="blogService.getValue() || blogService.getUser()"
+              >Create post</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/login"
+              *ngIf="!blogService.getValue() && !blogService.getUser()"
+              >Login</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/signup"
+              *ngIf="!blogService.getValue() && !blogService.getUser()"
+              >Sign Up</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="cursor: pointer"
+              (click)="logout()"
+              *ngIf="blogService.getValue() || blogService.getUser()"
+              >Log Out</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+   
+
+    <div class="manage" >
+      <div class="table-responsive">
+        <table 
+          class=" table table-borderless "
+          id="dataTable"
+          width="100%"
+          cellspacing="0"
+        >
+          <thead >
+            <tr class="table-info">
+              <th ></th>
+              <th style="text-align: left;color:brown;" t>Categories</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let category of categorys">
+              <td class="change" >
+                <input 
+                  type="checkbox"
+                  (change)="check(category)"
+                  (change)="change($event)"
+                />
+              </td>
+              <td class style="text-align: left; font-weight: bold;">{{ category.catname }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <input
+        type="text"
+        class="inpu form-control"
+        [(ngModel)]="cat"
+        placeholder="Type category name "
+      /><button class="btn btn-primary" (click)="add()">Create category</button>
+      <button
+            class="btn btn-danger"
+            (click)="delete()"
+            style="margin-left: 2%"
+          >
+            Clear category
+          </button>
+        <div style="text-align: center; margin-top: 2%; margin-bottom: 8%">
+          <button
+            class="btn btn-warning"
+            (click)="update()"
+            style="margin-right:5cm"
+          >
+            Update category
+          </button>
+          <div *ngIf="updatetoggle" >
+            <input
+              type="text"
+              class="inp form-control"
+              [(ngModel)]="updatecate.catname"
+            /><button class="btn btn-success but" (click)="updatecat()">
+              Update 
+            </button>
+          </div>
+         </div>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+  
